@@ -1,0 +1,61 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />    
+    <title>TODO list</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="./todo.js"></script>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
+<body class="container body-content" ng-app="demo" ng-controller="MainController" style="background-color: #3f0e44;">
+    <div class="masthead clearfix">
+        <div class="inner">
+            <nav class="nav nav-masthead"  style="float: right; margin-right: 98px;">
+            <a class="nav-link active" style="color: white" href="index.html">Home</a>
+            <a class="nav-link" style="color: white" href="team.html">Team</a>
+            <a class="nav-link" style="color: white" href="#">Todo</a>
+            </nav>
+        </div>
+    </div>
+
+    <div style="margin-top: 8rem;">   
+        <div class="jumbotron text-center">
+            <h1>
+                My Todo List 
+                <span class="badge" style="color: #3f0e44">
+                    {{ vm.list.length }}
+                </span>
+            </h1>
+        </div>
+
+        <!-- Existing items rows -->
+        <div class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <!-- loop over the todo list -->
+                <div ng-repeat="item in vm.list track by item._id" style="padding: 10px; color: white">
+                    <button ng-click="vm.removeItem(item._id)" class="btn btn-danger">x</button>
+                    {{ item.details }}
+                </div>
+            </div>
+        </div>
+
+        <br />
+
+        <form role="form">
+            <div class="form-group">
+                <div class="row">
+                    <label for="newItemDetails" style="color: white">New Item Details</label>
+                </div>
+                <div class="row">
+                    <div class="col-sm-8 text-center">
+                        <input type="text" class="form-control" placeholder="Learn Test-driven development" ng-model="vm.newItemDetails" />
+                    </div>
+                    <div class="col-sm-2 text-center">
+                        <button class="btn btn-primary" ng-click="vm.addItem()" ng-disabled="!vm.newItemDetails">Add</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

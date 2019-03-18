@@ -62,6 +62,41 @@ router.get('/people', function(req, res) {
     res.json(people);
 });
 
+// todo list model
+var todos = [
+    { _id: 1, details: "Finish First Push"},
+    { _id: 2, details: "Read 'No Silver Bullet'"},
+    { _id: 3, details: "Study Agile methods"},
+];
+
+router.get('/todo', function(req, res) {
+    res.send({
+        status: "Items Found",
+        items: todos,
+    })
+})
+
+router.post('/todo', function(req, res) {
+    var newItem = {
+        _id: todos[todos.length-1]._id + 1,
+        details: req.body.details,
+    }
+    todos.push(newItem);
+
+    res.send({
+        status: 'Items added',
+        item: newItem
+    })
+})
+router.delete('/todo/:id', function(req, res) {
+    var id = req.params['id'];
+    todos = todos.filter(function(item) { return item._id != id; })
+    res.send({
+        status: 'Item deleted',
+        itemId: id,
+    })
+})
+
 app.use('/api', router);
 app.listen(port);
 console.log('Magic happens on port ' + port);
