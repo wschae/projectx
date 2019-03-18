@@ -16,6 +16,7 @@ var router = express.Router();
 router.get('/people', function(req, res) {
     var people = [
         {name: 'sjkwak', url: 'assets/sjkwak.jpg'},
+        {name: 'bwpark', url: 'assets/bwpark.jpg'},
         {name: 'nykim', url: 'assets/nykim.jpg'},
         {name: 'ddolsoon', url: 'assets/ddolsoon.png'},
         {name: 'water', url: 'assets/fa2ri.jpg'},
