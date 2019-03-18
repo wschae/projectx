@@ -28,6 +28,7 @@ demoApp.controller('MainController', ['$scope', '$http', function($scope, $http)
       // vm.list = vm.list.filter(function(item) { return item._id != response.itemId })
     })
   }
+  console.log('abc');
 
   // expose vm using scope
   console.log('$scope.vm = vm')
