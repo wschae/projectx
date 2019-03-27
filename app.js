@@ -57,7 +57,8 @@ router.get('/people', function(req, res) {
         {name: 'dkim', url: 'assets/dkim.jpg'},
         {name: 'johnson', url: 'assets/johnson.jpg'},
         {name: 'swkim', url: 'assets/swkim.jpg'},
-        {name: 'bwpark', url: 'assets/bwpark.jpg'}
+        {name: 'bwpark', url: 'assets/bwpark.jpg'},
+        {name: 'sungjong', url: 'assets/sj.jpg'}
     ];
     res.json(people);
 });
