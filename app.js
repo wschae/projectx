@@ -60,7 +60,8 @@ router.get('/people', function(req, res) {
         {name: 'bwpark', url: 'assets/bwpark.jpg'},
         {name: 'jskim', url: 'assets/jskim.jpg'}
         ,{name: 'jongmin', url:'assets/jongmin.jpg'},
-        {name: 'woorim', url:'assets/woorim.png'}
+        {name: 'woorim', url:'assets/woorim.png'},
+        {name: 'Han,Donghee', url:'assets/HanDonghee.jpg'}
     ];
     res.json(people);
 });
