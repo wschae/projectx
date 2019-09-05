@@ -61,7 +61,8 @@ router.get('/people', function(req, res) {
         {name: 'jskim', url: 'assets/jskim.jpg'}
         ,{name: 'jongmin', url:'assets/jongmin.jpg'},
         {name: 'woorim', url:'assets/woorim.png'},
-        {name: 'Han,Donghee', url:'assets/HanDonghee.jpg'}
+        {name: 'Han,Donghee', url:'assets/HanDonghee.jpg'},
+        {name: 'Ryu,SeHyung', url:'http://imgnews.naver.net/image/5643/2019/08/26/0000002672_001_20190826142731142.jpg'},
     ];
     res.json(people);
 });
