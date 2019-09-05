@@ -61,8 +61,8 @@ router.get('/people', function(req, res) {
         {name: 'jskim', url: 'assets/jskim.jpg'}
         ,{name: 'jongmin', url:'assets/jongmin.jpg'},
         {name: 'woorim', url:'assets/woorim.png'},
-        {name: 'Han,Donghee', url:'assets/HanDonghee.jpg'}
-        {name: 'Ryu,SeHyung', url:'https://search.naver.com/search.naver?where=image&query=%EC%97%AC%EC%A7%84%EA%B5%AC&merge=0&res_fr=0&res_to=0&sort=0&viewtype=0&site=&face=1&color=0&mcs=0&a_q=&n_q=&o_q=&sm=tab_etc'}
+        {name: 'Han,Donghee', url:'assets/HanDonghee.jpg'},
+        {name: 'Ryu,SeHyung', url:'https://search.naver.com/search.naver?where=image&query=%EC%97%AC%EC%A7%84%EA%B5%AC&merge=0&res_fr=0&res_to=0&sort=0&viewtype=0&site=&face=1&color=0&mcs=0&a_q=&n_q=&o_q=&sm=tab_etc'},
     ];
     res.json(people);
 });
